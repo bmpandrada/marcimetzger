@@ -1,5 +1,5 @@
-import BodySection from "./componenst/layouts/bodySection";
-import MainLayout from "./componenst/layouts/main-layouts";
+import BodySection from "./common/layouts/bodySection";
+import MainLayout from "./common/layouts/main-layouts";
 
 const App = () => {
   return (
