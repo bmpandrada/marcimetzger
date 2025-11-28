@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const NavvLink = ({ navbarTogglerActive }) => {
+  const newLocal = "blcok lg:flex 2xl:ml-20";
   return (
     <nav
       id='navbarCollapse'
@@ -9,7 +10,7 @@ const NavvLink = ({ navbarTogglerActive }) => {
         !navbarTogglerActive ? "hidden" : ""
       } absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
     >
-      <ul className='blcok lg:flex 2xl:ml-20'>
+      <ul className={newLocal}>
         <li className='relative group'>
           <Link
             to='/'

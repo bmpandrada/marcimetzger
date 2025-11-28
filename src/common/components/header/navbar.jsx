@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 import HeaderLogo from "./headerLogo";
 import HeaderToggle from "./headerToggle";
 import NavvLink from "./navLink";
@@ -9,11 +10,12 @@ const HeaderNav = () => {
   const [navbarTogglerActive, setNavbarTogglerActive] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isDark, setIsDark] = useState(() => {
-    const theme = localStorage.getItem("theme");
-    return theme === "dark";
+    return localStorage.getItem("theme") === "dark";
   });
 
-  // On mount, sync <html> class with state
+  const location = useLocation(); // para ma-detect route change
+
+  // Sync <html> class with theme
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -22,36 +24,34 @@ const HeaderNav = () => {
     }
   }, [isDark]);
 
-  // Toggle theme when checkbox clicked
   const toggleTheme = () => {
     setIsDark((prev) => {
       const newTheme = !prev;
-      if (newTheme) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
+      localStorage.setItem("theme", newTheme ? "dark" : "light");
       return newTheme;
     });
   };
 
+  // Sticky header & scroll spy
   useEffect(() => {
-    const pageLinks = document.querySelectorAll(".ud-menu-scroll");
+    const pageLinks = Array.from(
+      document.querySelectorAll(".ud-menu-scroll"),
+    ).filter((link) => link.getAttribute("to")?.startsWith("#")); // only hash links
 
     const handleClick = (e) => {
+      const targetId = e.currentTarget.getAttribute("to");
+      if (!targetId.startsWith("#")) return; // skip normal router links
+
       e.preventDefault();
-      const target = document.querySelector(e.currentTarget.getAttribute("to"));
+      const target = document.querySelector(targetId);
       if (!target) return;
 
-      const headerOffset = 60; // adjust for fixed header
+      const headerOffset = 60;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     };
 
     pageLinks.forEach((link) => link.addEventListener("click", handleClick));
@@ -59,42 +59,30 @@ const HeaderNav = () => {
     const handleScroll = () => {
       const scrollPos =
         window.pageYOffset || document.documentElement.scrollTop;
+
       pageLinks.forEach((link) => {
         const target = document.querySelector(link.getAttribute("to"));
         if (!target) return;
         const top = target.offsetTop - 73;
         const bottom = top + target.offsetHeight;
-
-        if (scrollPos >= top && scrollPos < bottom) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
+        link.classList.toggle("active", scrollPos >= top && scrollPos < bottom);
       });
 
-      // Sticky header toggle
-      if (scrollPos > 50) {
-        // adjust threshold
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(scrollPos > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // init on mount
 
-    // Cleanup listeners on unmount
     return () => {
       pageLinks.forEach((link) =>
         link.removeEventListener("click", handleClick),
       );
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location]); // re-run on route change
 
-  const handleActive = () => {
-    setNavbarTogglerActive((prev) => !prev);
-  };
+  const handleActive = () => setNavbarTogglerActive((prev) => !prev);
 
   return (
     <div
