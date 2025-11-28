@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const AboutSection = () => {
+const AboutSection = ({ btnShow }) => {
   return (
     <section
       id='about'
@@ -26,12 +26,14 @@ const AboutSection = () => {
                   interactive panel.
                 </p>
 
-                <Link
-                  href='javascript:void(0)'
-                  className='inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark'
-                >
-                  Know More
-                </Link>
+                {btnShow && (
+                  <Link
+                    href='javascript:void(0)'
+                    className='inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark'
+                  >
+                    Know More
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -95,11 +97,11 @@ const AboutSection = () => {
                               y2='178.431'
                               gradientUnits='userSpaceOnUse'
                             >
-                              <stop stop-color='white' />
+                              <stop stopColor='white' />
                               <stop
                                 offset='1'
-                                stop-color='white'
-                                stop-opacity='0'
+                                stopColor='white'
+                                stopOpacity='0'
                               />
                             </linearGradient>
                           </defs>
@@ -131,11 +133,11 @@ const AboutSection = () => {
                               y2='133.937'
                               gradientUnits='userSpaceOnUse'
                             >
-                              <stop stop-color='white' />
+                              <stop stopColor='white' />
                               <stop
                                 offset='1'
-                                stop-color='white'
-                                stop-opacity='0'
+                                stopColor='white'
+                                stopOpacity='0'
                               />
                             </linearGradient>
                           </defs>
@@ -167,11 +169,11 @@ const AboutSection = () => {
                               y2='256.79'
                               gradientUnits='userSpaceOnUse'
                             >
-                              <stop stop-color='white' />
+                              <stop stopColor='white' />
                               <stop
                                 offset='1'
-                                stop-color='white'
-                                stop-opacity='0'
+                                stopColor='white'
+                                stopOpacity='0'
                               />
                             </linearGradient>
                           </defs>

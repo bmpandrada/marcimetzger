@@ -1,13 +1,16 @@
 import React from "react";
 import FooterNav from "../components/footer/footerNav";
 import HeaderNav from "../components/header/navbar";
-import SuspenseLoader from "../SuspenseLoader";
 
-const MainLayout = ({ children }) => {
+import { Outlet } from "react-router";
+
+const MainLayout = () => {
   return (
     <>
       <HeaderNav />
-      <SuspenseLoader>{children}</SuspenseLoader>
+
+      <Outlet />
+
       <FooterNav />
     </>
   );

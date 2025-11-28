@@ -13,6 +13,12 @@
     <script>
       new WOW().init();
     </script>
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

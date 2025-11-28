@@ -8,7 +8,7 @@ const FooterNavLink = () => {
         <ul>
           <li>
             <Link
-              to='javascript:void(0)'
+              to='/'
               className='inline-block mb-3 text-base text-gray-7 hover:text-primary'
             >
               Home
@@ -16,7 +16,7 @@ const FooterNavLink = () => {
           </li>
           <li>
             <Link
-              to='javascript:void(0)'
+              to='/about'
               className='inline-block mb-3 text-base text-gray-7 hover:text-primary'
             >
               Features
@@ -24,7 +24,7 @@ const FooterNavLink = () => {
           </li>
           <li>
             <Link
-              to='javascript:void(0)'
+              to='/about'
               className='inline-block mb-3 text-base text-gray-7 hover:text-primary'
             >
               About
@@ -32,7 +32,7 @@ const FooterNavLink = () => {
           </li>
           <li>
             <Link
-              to='javascript:void(0)'
+              to='/about'
               className='inline-block mb-3 text-base text-gray-7 hover:text-primary'
             >
               Testimonial

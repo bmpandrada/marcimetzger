@@ -9,59 +9,46 @@ const NavvLink = ({ navbarTogglerActive }) => {
         !navbarTogglerActive ? "hidden" : ""
       } absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
     >
-      <ul className='blcok lg:flex 2xl:ml-20'>
-        <li className='relative group'>
-          <Link
-            to='#home'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
-          >
-            Home
-          </Link>
-        </li>
-        <li className='relative group'>
-          <Link
-            to='#about'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-          >
-            About
-          </Link>
-        </li>
-        <li className='relative group'>
-          <Link
-            to='#pricing'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-          >
-            Pricing
-          </Link>
-        </li>
-        <li className='relative group'>
-          <Link
-            to='#team'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-          >
-            Team
-          </Link>
-        </li>
-        <li className='relative group'>
-          <Link
-            to='#contact'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-          >
-            Contact
-          </Link>
-        </li>
-        <li className='relative group'>
-          <Link
-            to='blog-grids.html'
-            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-          >
-            Blog
-          </Link>
-        </li>
+      <ul className='block lg:flex 2xl:ml-20'>
+        <Link
+          to='/'
+          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
+        >
+          Home
+        </Link>
+
+        <Link
+          to='/about'
+          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+        >
+          About
+        </Link>
+
+        <Link
+          to='/team'
+          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+        >
+          Team
+        </Link>
+
+        <Link
+          to='/contact'
+          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+        >
+          Contact
+        </Link>
+
+        <Link
+          to='blog-grids.html'
+          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+        >
+          Blog
+        </Link>
+
         <li className='relative submenu-item group'>
           <Link
             to='javascript:void(0)'
-            className='relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+            className='relative submenu-item group flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
           >
             Pages
             <svg
@@ -77,7 +64,7 @@ const NavvLink = ({ navbarTogglerActive }) => {
           </Link>
           <div className='submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full'>
             <Link
-              to='about.html'
+              to='/about'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               About Page
