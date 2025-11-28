@@ -2633,6 +2633,22 @@
     }
   }
 }
+
+.signUpBtn2 {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-blue-dark);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+
 .sticky .signUpBtn {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -2647,6 +2663,7 @@
     }
   }
 }
+
 .sticky #themeSwitcher ~ span {
   color: var(--color-dark);
   &:where(.dark, .dark *) {

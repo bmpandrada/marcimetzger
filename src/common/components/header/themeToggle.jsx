@@ -1,6 +1,6 @@
 import React from "react";
 
-const ThemeToggle = ({ isDark, toggleTheme }) => {
+const ThemeToggle = ({ isDark, toggleTheme, isHome }) => {
   return (
     <label
       htmlFor='themeSwitcher'
@@ -16,7 +16,11 @@ const ThemeToggle = ({ isDark, toggleTheme }) => {
         checked={isDark}
         onChange={toggleTheme}
       />
-      <span className={`block ${isDark ? "hidden" : "block"} text-white`}>
+      <span
+        className={`block ${isDark ? "hidden" : "block"} ${
+          isDark || !isHome ? "text-dark opacity-70" : "text-white"
+        }`}
+      >
         <svg
           className='fill-current'
           width='24'

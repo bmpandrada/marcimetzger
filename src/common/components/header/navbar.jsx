@@ -72,7 +72,7 @@ const HeaderNav = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
 
     return () => {
       pageLinks.forEach((link) =>
@@ -84,13 +84,10 @@ const HeaderNav = () => {
 
   const handleActive = () => setNavbarTogglerActive((prev) => !prev);
 
-  const headerClasses = `${
-    isHome
-      ? isSticky
-        ? "bg-white shadow-md dark:bg-dark-2"
-        : "bg-transparent"
-      : "bg-white dark:bg-dark-2 shadow-md"
-  } absolute top-0 left-0 z-40 flex items-center w-full transition-all duration-300`;
+  const headerClasses = `absolute top-0 left-0 z-40 flex items-center w-full transition-all duration-300
+  ${isSticky ? "sticky top-0 bg-white shadow-md dark:bg-dark-2" : ""}
+  ${!isHome && !isSticky ? "bg-white dark:bg-dark-2 " : ""}
+`;
 
   return (
     <div className={headerClasses}>
@@ -106,8 +103,12 @@ const HeaderNav = () => {
               <NavvLink navbarTogglerActive={navbarTogglerActive} />
             </div>
             <div className='flex items-center justify-end pr-16 lg:pr-0'>
-              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
-              <SignLink />
+              <ThemeToggle
+                isDark={isDark}
+                isHome={isHome}
+                toggleTheme={toggleTheme}
+              />
+              <SignLink isDark={isDark} isHome={isHome} />
             </div>
           </div>
         </div>
