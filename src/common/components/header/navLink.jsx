@@ -9,46 +9,59 @@ const NavvLink = ({ navbarTogglerActive }) => {
         !navbarTogglerActive ? "hidden" : ""
       } absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
     >
-      <ul className='block lg:flex 2xl:ml-20'>
-        <Link
-          to='/'
-          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
-        >
-          Home
-        </Link>
-
-        <Link
-          to='/about'
-          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-        >
-          About
-        </Link>
-
-        <Link
-          to='/team'
-          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-        >
-          Team
-        </Link>
-
-        <Link
-          to='/contact'
-          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-        >
-          Contact
-        </Link>
-
-        <Link
-          to='blog-grids.html'
-          className='relative group flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
-        >
-          Blog
-        </Link>
-
+      <ul className='blcok lg:flex 2xl:ml-20'>
+        <li className='relative group'>
+          <Link
+            to='/'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
+          >
+            Home
+          </Link>
+        </li>
+        <li className='relative group'>
+          <Link
+            to='/about'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+          >
+            About
+          </Link>
+        </li>
+        <li className='relative group'>
+          <Link
+            to='pricing'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+          >
+            Pricing
+          </Link>
+        </li>
+        <li className='relative group'>
+          <Link
+            to='team'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+          >
+            Team
+          </Link>
+        </li>
+        <li className='relative group'>
+          <Link
+            to='contact'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+          >
+            Contact
+          </Link>
+        </li>
+        <li className='relative group'>
+          <Link
+            to='blog-grids'
+            className='flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+          >
+            Blog
+          </Link>
+        </li>
         <li className='relative submenu-item group'>
           <Link
-            to='javascript:void(0)'
-            className='relative submenu-item group flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+            to='/'
+            className='relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
           >
             Pages
             <svg
@@ -70,43 +83,43 @@ const NavvLink = ({ navbarTogglerActive }) => {
               About Page
             </Link>
             <Link
-              to='pricing.html'
+              to='/pricing'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Pricing Page
             </Link>
             <Link
-              to='contact.html'
+              to='contact'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Contact Page
             </Link>
             <Link
-              to='blog-grids.html'
+              to='blog-grids'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Blog Grid Page
             </Link>
             <Link
-              to='blog-details.html'
+              to='blog-details'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Blog Details Page
             </Link>
             <Link
-              to='signup.html'
+              to='signup'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Sign Up Page
             </Link>
             <Link
-              to='signin.html'
+              to='signin'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               Sign In Page
             </Link>
             <Link
-              to='404.html'
+              to='404'
               className='block rounded-sm px-4 py-2.5 text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'
             >
               404 Page
