@@ -2,14 +2,14 @@ import React from "react";
 
 const TechLogoSection = () => {
   return (
-    <section class='pb-20 dark:bg-dark'>
+    <section class='pb-20 dark:bg-dark bg-white'>
       <div class='container px-4 mx-auto'>
         <div class='flex flex-wrap items-center justify-center gap-8 -mx-4 xl:gap-11'>
           <a href='https://graygrids.com/'>
             <img
               src='./images/brands/graygrids.svg'
               alt='graygrids'
-              class='dark:hidden'
+              class='block dark:hidden'
             />
             <img
               src='./images/brands/graygrids-white.svg'
@@ -21,7 +21,7 @@ const TechLogoSection = () => {
             <img
               src='./images/brands/lineicons.svg'
               alt='lineicons'
-              class='dark:hidden'
+              class='block dark:hidden'
             />
             <img
               src='./images/brands/lineicons-white.svg'
@@ -33,7 +33,7 @@ const TechLogoSection = () => {
             <img
               src='./images/brands/uideck.svg'
               alt='uideck'
-              class='dark:hidden'
+              class='block dark:hidden'
             />
             <img
               src='./images/brands/uideck-white.svg'
@@ -45,7 +45,7 @@ const TechLogoSection = () => {
             <img
               src='./images/brands/ayroui.svg'
               alt='ayroui'
-              class='dark:hidden'
+              class='block dark:hidden'
             />
             <img
               src='./images/brands/ayroui-white.svg'
@@ -57,7 +57,7 @@ const TechLogoSection = () => {
             <img
               src='./images/brands/tailgrids.svg'
               alt='tailgrids'
-              class='dark:hidden'
+              class='block dark:hidden'
             />
             <img
               src='./images/brands/tailgrids-white.svg'
