@@ -2,7 +2,7 @@ import React from "react";
 import HeaderBannerPage from "../common/components/header/headerBannerPage";
 import { useTheme } from "../common/context/contextApi";
 
-const SignIn = () => {
+const SignInPage = () => {
   const { isDark } = useTheme();
   return (
     <>
@@ -364,4 +364,4 @@ const SignIn = () => {
   );
 };
 
-export default React.memo(SignIn);
+export default React.memo(SignInPage);
