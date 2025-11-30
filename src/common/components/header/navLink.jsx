@@ -1,8 +1,11 @@
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router";
+import SignLink from "./signLink";
+import { useTheme } from "../../context/contextApi";
 
 const NavvLink = ({ navbarTogglerActive }) => {
   const localPath = useLocation();
+  const { isDark, isHome, handleActive } = useTheme();
 
   const newLocal = "blcok lg:flex 2xl:ml-20";
   const common = "flex py-2 mx-10 text-base font-medium ud-menu-scroll";
@@ -27,13 +30,14 @@ const NavvLink = ({ navbarTogglerActive }) => {
       id='navbarCollapse'
       className={`${
         !navbarTogglerActive ? "hidden" : ""
-      } absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
+      }  absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
     >
       <ul className={newLocal}>
         {dataNav.map((item, index) => (
           <li className='relative group' key={index}>
             <NavLink
               to={item.to}
+              onClick={handleActive}
               className={({ isActive }) =>
                 `${common} ${isActive ? active : base}`
               }
@@ -116,6 +120,12 @@ const NavvLink = ({ navbarTogglerActive }) => {
           </div>
         </li> */}
       </ul>
+      <SignLink
+        isDark={isDark}
+        isHome={isHome}
+        handleActive={handleActive}
+        customClass={"flex flex-col w-fit px-5 lg:hidden"}
+      />
     </nav>
   );
 };
