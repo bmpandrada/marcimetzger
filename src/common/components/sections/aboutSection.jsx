@@ -11,7 +11,8 @@ const AboutSection = ({ btnShow }) => {
                 <h2 className='font-heading mb-5 text-3xl font-light leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]'>MARCI METZGER</h2>
                 <p className='mb-2 text-base leading-relaxed text-body-color dark:text-dark-6'>REALTOR FOR NEARLY 3 DECADES!</p>
 
-                <p className='mb-10 text-sm leading-relaxed text-body-color dark:text-dark-6'>206-919-6886</p>
+                <p className='mb-12 text-base leading-relaxed text-body-color dark:text-dark-6'>Marci J Metzger Marci was a REALTOR, then licensed Broker, in Washington State. Now, she is enjoying the sunshine, and helping clients in Southern Nevada. Having helped buyers and sellers in many markets since 1995, she is a wealth of knowledge. In Her Words "I love that small-town feeling that our community offers. Spectacular golf courses, parks, pool, and easy access to Las Vegas make Pahrump a great place to call home. Working or retired, fast-paced or looking to relax... there's a place for you here! I enjoy living in the Mountain Falls community and will strive to find you a home that will suit you just as this community does me. </p>
+
                 {btnShow && (
                   <Link href='javascript:void(0)' className='inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark'>
                     Know More
