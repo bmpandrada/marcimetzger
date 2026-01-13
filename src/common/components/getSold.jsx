@@ -1,54 +1,49 @@
 import React from "react";
 
-export default function GetSold() {
+export default function getSold() {
   return (
     <section class='relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px]'>
-      <div class='container px-4 mx-auto'>
-        <section className='relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] '>
-          <div className='container mx-auto px-4'>
-            {/* TITLE */}
-            <div className='mb-[60px] text-center'>
-              <span className='font-heading block text-3xl text-primary font-light'>GET IT SOLD</span>
-            </div>
+      <div className='container mx-auto px-4'>
+        {/* TITLE */}
+        <div className='mb-[60px] text-center'>
+          <span className='font-heading block text-3xl font-light text-primary'>GET IT SOLD</span>
+        </div>
 
-            {/* CONTENT GRID */}
-            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'>
-              {/* ITEM 1 */}
-              <div className='flex'>
-                <div className='mr-4 flex h-full w-full items-center justify-center rounded-xl bg-primary text-white'>
-                  <img src='/images/blog/img-1.webp' alt='' className='h-full object-cover object-center' />
-                </div>
-                <div>
-                  <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>DTop Residential Sales Last 5 Years</h3>
-                  <p className='text-base text-body-color dark:text-dark-6'>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.</p>
-                </div>
+        {/* CARD GRID */}
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          {[
+            {
+              img: "/images/blog/img-1.webp",
+              title: "Top Residential Sales Last 5 Years",
+              text: "We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.",
+            },
+            {
+              img: "/images/blog/img-2.webp",
+              title: "Don't Just List it...",
+              text: "Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home.",
+            },
+            {
+              img: "/images/blog/img-3.webp",
+              title: "Guide to Buyers",
+              text: "Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!",
+            },
+          ].map((item, index) => (
+            <div key={index} className='flex h-full flex-col overflow-hidden bg-white shadow-md transition hover:shadow-lg dark:bg-dark-2'>
+              {/* IMAGE */}
+              <div className='h-[220px] w-full overflow-hidden'>
+                <img src={item.img} alt='' className='h-full w-full object-cover object-center transition duration-300 hover:scale-105' />
               </div>
 
-              {/* ITEM 2 */}
-              <div className='flex'>
-                <div className='mr-4 flex h-full w-full items-center justify-center rounded-xl bg-primary text-white'>
-                  <img src='/images/blog/img-2.webp' alt='' className='h-full object-cover object-center' />
-                </div>
-                <div>
-                  <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>Don’t Just List It</h3>
-                  <p className='text-base text-body-color dark:text-dark-6'>We exhaust every avenue to ensure your listing reaches the right buyers and gets top value.</p>
-                </div>
-              </div>
-
-              {/* ITEM 3 */}
-              <div className='flex'>
-                <div className='mr-4 flex h-full w-full items-center justify-center rounded-xl bg-primary text-white'>
-                  <img src='/images/blog/img-3.webp' alt='' className='h-full object-cover object-right' />
-                </div>
-                <div>
-                  <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>Guide to Buyers</h3>
-                  <p className='text-base text-body-color dark:text-dark-6'>Nobody knows the market like we do. Enjoy having a pro guiding you every step of the way.</p>
-                </div>
+              {/* CONTENT */}
+              <div className='flex h-auto flex-col p-6'>
+                <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>{item.title}</h3>
+                <p className='mb-6 text-base text-body-color dark:text-dark-6'>{item.text}</p>
               </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
       </div>
+
       <div>
         <span class='absolute left-4 top-4 -z-1'>
           <svg width='48' height='134' viewBox='0 0 48 134' fill='none' xmlns='http://www.w3.org/2000/svg'>
