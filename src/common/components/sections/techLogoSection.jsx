@@ -8,24 +8,24 @@ const TechLogoSection = ({ customClass }) => {
       <div className='container px-4 mx-auto'>
         <div className='flex flex-wrap items-center justify-center gap-8 -mx-4 xl:gap-11'>
           <Link href='https://graygrids.com/'>
-            <img src='/images/icons/icon-1.webp' alt='graygrids' className='block dark:hidden' />
-            <img src='./images/icons/icon-4.webp' alt='graygrids' className='hidden dark:block' />
+            <img src='/images/icons/icon-1.webp' alt='graygrids' className='block dark:hidden w-25 h-25 object-contain' />
+            <img src='./images/icons/icon-4.webp' alt='graygrids' className='hidden dark:block w-25 h-25 object-contain' />
           </Link>
           <Link href='https://lineicons.com/'>
-            <img src='/images/icons/icon-2.webp' alt='lineicons' className='block dark:hidden' />
-            <img src='/images/icons/ionc-3.webp' alt='graygrids' className='hidden dark:block' />
+            <img src='/images/icons/icon-2.webp' alt='lineicons' className='block dark:hidden w-25 h-25 object-contain' />
+            <img src='/images/icons/ionc-3.webp' alt='graygrids' className='hidden dark:block w-25 h-25 object-contain' />
           </Link>
           {/* <Link href='https://uideck.com/'>
-            <img src='./images/brands/uideck.svg' alt='uideck' className='block dark:hidden' />
-            <img src='./images/brands/uideck-white.svg' alt='graygrids' className='hidden dark:block' />
+            <img src='./images/brands/uideck.svg' alt='uideck' className='block dark:hidden w-25 h-25 object-contain' />
+            <img src='./images/brands/uideck-white.svg' alt='graygrids' className='hidden dark:block w-25 h-25 object-contain' />
           </Link> */}
           <Link href='https://ayroui.com/'>
-            <img src='/images/icons/ionc-3.webp' alt='ayroui' className='block dark:hidden' />
-            <img src='/images/icons/icon-2.webp' alt='graygrids' className='hidden dark:block' />
+            <img src='/images/icons/ionc-3.webp' alt='ayroui' className='block dark:hidden w-25 h-25 object-contain' />
+            <img src='/images/icons/icon-2.webp' alt='graygrids' className='hidden dark:block w-25 h-25 object-contain' />
           </Link>
           <Link href='https://tailgrids.com/'>
-            <img src='/images/icons/icon-4.webp' alt='tailgrids' className='block dark:hidden' />
-            <img src='/images/icons/icon-1.webp' alt='graygrids' className='hidden dark:block' />
+            <img src='/images/icons/icon-4.webp' alt='tailgrids' className='block dark:hidden w-25 h-25 object-contain' />
+            <img src='/images/icons/icon-1.webp' alt='graygrids' className='hidden dark:block w-25 h-25 object-contain' />
           </Link>
         </div>
       </div>

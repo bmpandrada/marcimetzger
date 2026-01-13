@@ -7,6 +7,7 @@ import BlogSection from "../common/components/sections/blogSection";
 import AboutSection from "../common/components/sections/aboutSection";
 import TechLogoSection from "../common/components/sections/techLogoSection";
 import SignUpSection from "../common/components/sections/singupSection";
+import GetSold from "../common/components/getSold";
 
 const HomePage = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const HomePage = () => {
       <HeroPlay />
       {/* <FeaturesSection /> */}
       <AboutSection btnShow={true} />
+      <GetSold />
       <CtaSection />
       <BlogSection />
       <TechLogoSection />

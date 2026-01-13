@@ -8,7 +8,7 @@ const AboutSection = ({ btnShow }) => {
           <div className='flex flex-wrap items-center -mx-4'>
             <div className='w-full px-4 lg:w-1/2'>
               <div className='mb-12 max-w-[540px] lg:mb-0'>
-                <h2 className='mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]'>MARCI METZGER</h2>
+                <h2 className='font-heading mb-5 text-3xl font-light leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]'>MARCI METZGER</h2>
                 <p className='mb-2 text-base leading-relaxed text-body-color dark:text-dark-6'>REALTOR FOR NEARLY 3 DECADES!</p>
 
                 <p className='mb-10 text-sm leading-relaxed text-body-color dark:text-dark-6'>206-919-6886</p>

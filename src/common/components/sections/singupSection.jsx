@@ -13,8 +13,8 @@ export default function SignUpSection() {
           <div className='w-full px-4 lg:w-7/12 xl:w-8/12'>
             <div className='ud-contact-content-wrapper'>
               <div className='ud-contact-title mb-12'>
-                <span className='block mb-6 text-base font-medium text-dark dark:text-white'>Search Listings</span>
-                <h2 className='max-w-full text-[35px] font-semibold leading-[1.14] text-dark dark:text-white'>Find Your Dream Home</h2>
+                <span className='font-heading block mb-6 text-base font-medium text-dark dark:text-white'>Search Listings</span>
+                <h2 className='font-heading max-w-full text-[35px] font-semibold leading-[1.14] text-dark dark:text-white'>Find Your Dream Home</h2>
               </div>
             </div>
           </div>
@@ -27,7 +27,6 @@ export default function SignUpSection() {
                 animationDelay: "0.2s",
               }}
             >
-              <h3 className='mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]'>Send us a Message</h3>
               <form>
                 <div className='mb-[22px]'>
                   <label htmlFor='location' className='mb-4 block text-sm text-body-color dark:text-dark-6'>
