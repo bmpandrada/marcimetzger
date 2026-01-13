@@ -1,41 +1,44 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
-const images = ["/images/gallery/img-1.webp", "/images/gallery/img-2.webp", "/images/gallery/img-3.webp", "/images/gallery/img-4.webp"];
+const images = ["/images/gallery/img-1.webp", "/images/gallery/img-2.webp", "/images/gallery/img-3.webp", "/images/gallery/img-4.webp", "/images/gallery/img-1.webp", "/images/gallery/img-2.webp", "/images/gallery/img-3.webp", "/images/gallery/img-4.webp"];
 
 const PhotoCarousel = () => {
   return (
-    <section className='bg-white py-20 dark:bg-dark '>
+    <section className='bg-white py-20 dark:bg-dark'>
       <div className='container mx-auto px-4 wow fadeInUp'>
-        {/* Title */}
         <div className='mb-12 text-center'>
-          <span className='mb-2 font-heading block text-3xl font-light text-primary'>GALLERY</span>
+          <span className='font-heading block text-3xl font-light text-primary'>GALLERY</span>
         </div>
 
         <Swiper
-          modules={[Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          loop={true}
+          modules={[Autoplay, EffectCoverflow]}
+          effect='coverflow'
+          centeredSlides
+          slidesPerView={3}
+          loop
+          grabCursor
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+          coverflowEffect={{
+            rotate: 35,
+            stretch: 0,
+            depth: 120,
+            modifier: 1,
+            slideShadows: false,
           }}
           className='pb-12'
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className='group overflow-hidden'>
-                <img src={img} alt={`Gallery ${index + 1}`} className='h-[280px] w-full object-cover object-center transition duration-300 group-hover:scale-110' />
+              <div className='overflow-hidden rounded-xl shadow-lg'>
+                <img src={img} alt={`Gallery ${index + 1}`} className='h-[300px] w-full object-cover object-center' />
               </div>
             </SwiperSlide>
           ))}
