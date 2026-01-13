@@ -36,9 +36,9 @@ const AboutSection = ({ btnShow }) => {
 
                   <div className='relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-40 sm:p-5 lg:mb-4 xl:mb-8'>
                     <div>
-                      <span className='block text-5xl font-extrabold text-white'>09</span>
-                      <span className='block text-base font-semibold text-white'>We have</span>
-                      <span className='block text-base font-medium text-white text-opacity-70'>Years of experience</span>
+                      <span className='block text-5xl font-extrabold text-white'>Markets since </span>
+                      <span className='block text-base font-semibold text-white'>1995</span>
+                      <span className='block text-base font-medium text-white text-opacity-70'>She is a wealth of knowledge.</span>
                     </div>
                     <div>
                       <span className='absolute top-0 left-0 -z-10'>
