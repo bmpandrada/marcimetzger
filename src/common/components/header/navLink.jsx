@@ -9,39 +9,22 @@ const NavvLink = ({ navbarTogglerActive }) => {
 
   const newLocal = "blcok lg:flex 2xl:ml-20";
   const common = "flex py-2 mx-10 text-base font-medium ud-menu-scroll";
-  const base =
-    localPath.pathname === "/"
-      ? "text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
-      : "text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10";
-  const active =
-    localPath.pathname === "/"
-      ? "text-primary group-hover:text-primary dark:text-white/50 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 active"
-      : "text-primary group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10 active";
+  const base = localPath.pathname === "/" ? "text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10" : "text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10";
+  const active = localPath.pathname === "/" ? "text-primary group-hover:text-primary dark:text-white/50 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 active" : "text-primary group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10 active";
 
   const dataNav = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
-    { label: "Blog", to: "/blog" },
+    { label: "About", to: "/" },
+    { label: "Blog", to: "/" },
     { label: "Contact", to: "/contact" },
   ];
 
   return (
-    <nav
-      id='navbarCollapse'
-      className={`${
-        !navbarTogglerActive ? "hidden" : ""
-      }  absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}
-    >
+    <nav id='navbarCollapse' className={`${!navbarTogglerActive ? "hidden" : ""}  absolute right-4 top-full  w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6`}>
       <ul className={newLocal}>
         {dataNav.map((item, index) => (
           <li className='relative group' key={index}>
-            <NavLink
-              to={item.to}
-              onClick={handleActive}
-              className={({ isActive }) =>
-                `${common} ${isActive ? active : base}`
-              }
-            >
+            <NavLink to={item.to} onClick={handleActive} className={({ isActive }) => `${common} ${isActive ? active : base}`}>
               {item.label}
             </NavLink>
           </li>
@@ -120,12 +103,7 @@ const NavvLink = ({ navbarTogglerActive }) => {
           </div>
         </li> */}
       </ul>
-      <SignLink
-        isDark={isDark}
-        isHome={isHome}
-        handleActive={handleActive}
-        customClass={"flex flex-col w-fit px-5 lg:hidden"}
-      />
+      <SignLink isDark={isDark} isHome={isHome} handleActive={handleActive} customClass={"flex flex-col w-fit px-5 lg:hidden"} />
     </nav>
   );
 };

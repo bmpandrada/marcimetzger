@@ -6,19 +6,21 @@ import CtaSection from "../common/components/sections/ctaSection";
 import BlogSection from "../common/components/sections/blogSection";
 import AboutSection from "../common/components/sections/aboutSection";
 import TechLogoSection from "../common/components/sections/techLogoSection";
+import SignUpSection from "../common/components/sections/singupSection";
 
 const HomePage = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className='relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-40'>
+    <div className='relative overflow-hidden bg-[#016eca] pt-[120px] md:pt-[130px] lg:pt-40'>
       <HeroPlay />
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
       <AboutSection btnShow={true} />
       <CtaSection />
       <BlogSection />
       <TechLogoSection />
+      <SignUpSection />
     </div>
   );
 };

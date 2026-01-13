@@ -2,10 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const HeaderLogo = ({ isSticky, isDark, altText = "logo template" }) => {
-  const logoSrc =
-    isSticky && !isDark
-      ? "/images/logo/logo.svg"
-      : "/images/logo/logo-white.svg";
+  const logoSrc = isSticky && !isDark ? "/images/logo/logo.webp" : "/images/logo/logo-white.webp";
 
   return (
     <div className='max-w-full px-4 w-60'>

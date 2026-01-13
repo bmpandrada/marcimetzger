@@ -9,16 +9,9 @@ const BlogSection = () => {
         <div className='flex flex-wrap justify-center -mx-4'>
           <div className='w-full px-4'>
             <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
-              <span className='block mb-2 text-lg font-semibold text-primary'>
-                Our Blogs
-              </span>
-              <h2 className='mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]'>
-                Our Recent News
-              </h2>
-              <p className='text-base text-body-color dark:text-dark-6'>
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
+              <span className='block mb-2 text-lg font-semibold text-primary'>Our Services</span>
+              <h2 className='mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]'>Rely on Expertise</h2>
+              <p className='text-base text-body-color dark:text-dark-6'>If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.</p>
             </div>
           </div>
         </div>
