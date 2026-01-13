@@ -8,19 +8,15 @@ import React from "react";
 
 const FooterNav = () => {
   return (
-    <footer
-      role='contentinfo'
-      className='wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]'
-      data-wow-delay='.15s'
-    >
+    <footer role='contentinfo' className='wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]' data-wow-delay='.15s'>
       <div className='container px-4 mx-auto'>
         <div className='flex flex-wrap -mx-4'>
           {/* footer link default */}
           <FooterNavLink />
           {/* features link */}
-          <FooterFeaturesLink />
+          {/* <FooterFeaturesLink /> */}
           {/* product link */}
-          <FooterProductLink />
+          {/* <FooterProductLink /> */}
           {/* latest blog */}
           <FooterLatestBlog />
         </div>
