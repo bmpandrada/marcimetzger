@@ -19,8 +19,8 @@ export default function GetSold() {
                   <img src='/images/blog/img-1.webp' alt='' className='h-full object-cover object-center' />
                 </div>
                 <div>
-                  <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>Don’t Just List It</h3>
-                  <p className='text-base text-body-color dark:text-dark-6'>We exhaust every avenue to ensure your listing reaches the right buyers and gets top value.</p>
+                  <h3 className='mb-4 text-xl font-semibold text-dark dark:text-white'>DTop Residential Sales Last 5 Years</h3>
+                  <p className='text-base text-body-color dark:text-dark-6'>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.</p>
                 </div>
               </div>
 
