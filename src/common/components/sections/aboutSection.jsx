@@ -31,7 +31,7 @@ const AboutSection = ({ btnShow }) => {
 
                 <div className='w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4'>
                   <div className='mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]'>
-                    <img src='./images/about/about-image-02.jpg' alt='about image' className='object-cover object-center w-full h-full' />
+                    <img src='./images/about/about-1.webp' alt='about image' className='object-cover object-center w-full h-full' />
                   </div>
 
                   <div className='relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-40 sm:p-5 lg:mb-4 xl:mb-8'>
