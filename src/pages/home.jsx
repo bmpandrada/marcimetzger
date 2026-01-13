@@ -8,6 +8,7 @@ import AboutSection from "../common/components/sections/aboutSection";
 import TechLogoSection from "../common/components/sections/techLogoSection";
 import SignUpSection from "../common/components/sections/singupSection";
 import GetSold from "../common/components/getSold";
+import PhotoCarousel from "../common/components/PhotoCarousel";
 
 const HomePage = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const HomePage = () => {
       {/* <FeaturesSection /> */}
       <AboutSection btnShow={true} />
       <GetSold />
+      <PhotoCarousel />
       <CtaSection />
       <BlogSection />
       <TechLogoSection />
